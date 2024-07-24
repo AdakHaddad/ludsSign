@@ -86,6 +86,19 @@
           </a>
           <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
+              <li class="dropdown messages-menu" id="envelope_messages">
+                  <!-- /.dropdown-messages -->
+              </li>
+              
+              <li class="dropdown notifications-menu" id="envelope_notifications">
+                  <!-- /.dropdown-messages -->
+              </li>
+              
+              <li class="dropdown notifications-menu" id="support">
+                <a generator="adianti" href="index.php?class=SystemSupportForm">
+                    <i class="fa fa-life-ring fa-fw"></i>
+                </a>
+              </li>
               
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
@@ -164,7 +177,11 @@
         <div class="pull-right hidden-xs">
           <b>Version</b> {system_version}
         </div>
-
+        <strong>{userunitid} - {userunitname}</strong>
+        <!--[IFADMIN]-->
+        <a style="cursor:pointer; color: teal" generator="adianti" href="index.php?class=SystemModulesCheckView&adianti_open_tab=1&adianti_tab_name=PHP%20Modules"> <i class="fa fa-code" aria-hidden="true"></i> PHP Modules </a> &nbsp;&nbsp;
+        <span style="cursor:pointer; color: teal" onclick="Adianti.showDebugPanel()"> <i class="fa fa-window-maximize" aria-hidden="true"></i> Debug Console </span>
+        <!--[/IFADMIN]-->
       </footer>
       
       <div id="adianti_debug_panel" class="debug-panel">

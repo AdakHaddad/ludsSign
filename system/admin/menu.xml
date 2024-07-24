@@ -1,18 +1,4 @@
 <menu>
-    <menuitem label="Digital Signage">
-      <icon>far:circle fa-fw </icon>
-      <menu>
-              <menuitem label='Files'>
-                  <icon>fas:cloud-upload-alt fa-fw</icon>
-                  <action>ArquivosList#method=onShow</action>
-              </menuitem>
-              <menuitem label='Config'>
-                  <icon>fas:cog fa-fw</icon>
-                  <action>ConfigForm</action>
-              </menuitem>                    
-      </menu>
-      
-    </menuitem>
     <menuitem label='_t{Administration}'>
         <icon>fas:home fa-fw</icon>
         <menu>
@@ -144,13 +130,30 @@
                   <icon>fas:exclamation-triangle fa-fw</icon>
                   <action>SystemPHPErrorLogView</action>
               </menuitem>
-              <menuitem label='Session dump'>
+              <menuitem label='Session vars'>
                   <icon>fas:code fa-fw</icon>
-                  <action>SystemSessionDumpView</action>
+                  <action>SystemSessionVarsView</action>
               </menuitem>
         </menu>
     </menuitem>
-            
+        
+    <menuitem label='Common pages'>
+        <menu>
+            <menuitem label='Common page 1'>
+                <icon></icon>
+                <action>CommonPage</action>
+            </menuitem>
+            <menuitem label='Common page 2'>
+                <icon></icon>
+                <action>CommonPage</action>
+            </menuitem>
+            <menuitem label='Common page 3'>
+                <icon></icon>
+                <action>CommonPage</action>
+            </menuitem>
+        </menu>
+    </menuitem>
+    
     <menuitem label='Logout'>
         <action>LoginForm#method=onLogout#static=1</action>
         <icon>fas:sign-out-alt fa-fw</icon>
